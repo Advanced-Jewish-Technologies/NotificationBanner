@@ -643,7 +643,7 @@ open class BaseNotificationBanner: UIView {
     private func currentDeviceOrientationIsSupportedByApp() -> Bool {
         
         let supportedOrientations = UIApplication.shared.supportedInterfaceOrientations(for: appWindow)
-        return supportedOrientations.contains(.portrait)
+        return UIDevice.current.orientation == .portrait
         
         switch UIDevice.current.orientation {
         case .portrait:
